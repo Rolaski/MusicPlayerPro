@@ -3,6 +3,7 @@ package com.example.musicplayerpro.files;
 import jakarta.persistence.*;
 import java.time.LocalTime;
 
+//entity class for hibernate
 @Entity
 @Table(name = "songs")
 public class Song
@@ -38,48 +39,27 @@ public class Song
     {
         return albumPath;
     }
-    public void setAlbumPath()
-    {
-        this.albumPath = albumPath;
-    }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTrack() {
         return track;
     }
 
-    public void setTrack(String track) {
-        this.track = track;
-    }
 
     public String getMusician() {
         return musician;
-    }
-
-    public void setMusician(String musician) {
-        this.musician = musician;
     }
 
     public LocalTime getSongLength() {
         return songLength;
     }
 
-    public void setSongLength(LocalTime songLength) {
-        this.songLength = songLength;
-    }
-
     public String getPath() {
         return path;
     }
 
-    public void setPath(String path) {
-        this.path = path;
-    }
 }
