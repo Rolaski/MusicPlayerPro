@@ -1,0 +1,59 @@
+#table .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#table {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-size: 35;
+}
+
+#table .column-header-background {
+    -fx-background-color: transparent;
+}
+
+#table .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+#table .table-row-cell .table-cell
+{
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background .label{
+   -fx-background-color: transparent;
+   -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+
+}
+
+
+#table .table-row-cell:hover .table-cell {
+    -fx-text-fill: white;
+    -fx-fill-height: true;
+}
+
+#table .table-row-cell .table-cell {
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+
+/*wywalenie paska przewijania bo jest zbedny*/
+#table .scroll-bar:horizontal
+{
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+}
+
+#table .virtual-flow
+{
+    -fx-viewport-position: top;
+}

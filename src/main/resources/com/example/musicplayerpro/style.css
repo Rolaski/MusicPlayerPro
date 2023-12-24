@@ -1,0 +1,51 @@
+.color
+{
+    -fx-background-image: url("../images/background.jpg");
+}
+
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #0d1b4c;
+    -fx-border-width: 2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #1a3a99, #6d6d6d);
+}
+
+
+#playButton, #pauseButton, #resetButton, #nextButton
+{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+
+.trackView
+{
+    -fx-font-size: 20;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+
+
+
+
+.slider .track {
+    -fx-background-color: linear-gradient(to bottom, #a6a6a6, #d9d9d9);
+    -fx-background-insets: 0;
+}
+.slider .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 5;
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+}
+
