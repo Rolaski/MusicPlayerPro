@@ -153,7 +153,7 @@ public class SongController
             currentIndex = table.getItems().indexOf(currentSong);
         }
 
-        // Odtwórz następny utwór (jeśli istnieje)
+        //if existed
         if (currentIndex < table.getItems().size() - 1) {
             currentIndex++;
             Song nextSong = table.getItems().get(currentIndex);
