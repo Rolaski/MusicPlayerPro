@@ -19,7 +19,7 @@
 }
 
 
-#playButton, #pauseButton, #resetButton, #nextButton
+#playButton, #pauseButton, #resetButton, #nextButton, #shuffleButton
 {
     -fx-background-color: transparent;
     -fx-border-width: 0;
