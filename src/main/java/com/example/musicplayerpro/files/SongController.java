@@ -5,10 +5,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -16,9 +18,12 @@ import javafx.util.Duration;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.net.URL;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 public class SongController
 {
@@ -328,7 +333,6 @@ public class SongController
             {
                 System.out.println("I CANNOT FIND IMAGE FOR: " + song.getTrack());
             }
-
             //next song after current song end
             mediaPlayer.setOnEndOfMedia(() ->
             {
