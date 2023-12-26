@@ -2,6 +2,7 @@ package com.example.musicplayerpro.files;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -17,6 +18,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 public class SongController
 {
@@ -57,11 +59,15 @@ public class SongController
     private ImageView reset;
     @FXML
     private ImageView next;
+    @FXML
+    private ImageView shuffle;
 
     private boolean isSliderBeingDragged = false;
+    private boolean isShuffleMode = false;
     static double lastVolumeValue = 25.0;
     private int currentIndex = Integer.MAX_VALUE;
     private final SessionFactory sessionFactory;
+    private List<Song> songs;
     private MediaPlayer mediaPlayer;
 
     //BUTTONS HOVER SECTION
@@ -74,8 +80,8 @@ public class SongController
     @FXML
     void playDefault(MouseEvent event)
     {
-        Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/play.png")).toExternalForm());
-        play.setImage(hoverImage);
+        Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/play.png")).toExternalForm());
+        play.setImage(defaultImage);
     }
     @FXML
     void resumeHover(MouseEvent event)
@@ -86,8 +92,8 @@ public class SongController
     @FXML
     void resumeDefault(MouseEvent event)
     {
-        Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/resume.png")).toExternalForm());
-        resume.setImage(hoverImage);
+        Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/resume.png")).toExternalForm());
+        resume.setImage(defaultImage);
     }
     @FXML
     void resetHover(MouseEvent event)
@@ -98,8 +104,8 @@ public class SongController
     @FXML
     void resetDefault(MouseEvent event)
     {
-        Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/reset.png")).toExternalForm());
-        reset.setImage(hoverImage);
+        Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/reset.png")).toExternalForm());
+        reset.setImage(defaultImage);
     }
     @FXML
     void nextHover(MouseEvent event)
@@ -110,8 +116,20 @@ public class SongController
     @FXML
     void nextDefault(MouseEvent event)
     {
-        Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/next.png")).toExternalForm());
-        next.setImage(hoverImage);
+        Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/next.png")).toExternalForm());
+        next.setImage(defaultImage);
+    }
+    @FXML
+    void shuffleDefault()
+    {
+        Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/shuffle.png")).toExternalForm());
+        shuffle.setImage(defaultImage);
+    }
+    @FXML
+    void shuffleHover()
+    {
+        Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/shuffleHover.png")).toExternalForm());
+        shuffle.setImage(hoverImage);
     }
 
 
@@ -147,24 +165,54 @@ public class SongController
     @FXML
     private void nextButtonClicked()
     {
-        if (currentIndex == Integer.MAX_VALUE)
+        if (isShuffleMode)
         {
-            Song currentSong = table.getSelectionModel().getSelectedItem();
-            currentIndex = table.getItems().indexOf(currentSong);
-        }
-
-        //if existed
-        if (currentIndex < table.getItems().size() - 1) {
-            currentIndex++;
-            Song nextSong = table.getItems().get(currentIndex);
-            playSong(nextSong);
+            //index for shuffle mode
+            currentIndex = shuffleSongs();
         }
         else
         {
-            currentIndex = -1;
-            nextButtonClicked();
+            //index for default mode
+            if (currentIndex < table.getItems().size() - 1)
+            {
+                currentIndex++;
+            }
+            else
+            {
+                currentIndex = 0;
+            }
+        }
+        Song nextSong = table.getItems().get(currentIndex);
+        playSong(nextSong);
+    }
+    //shuffle mode!
+    @FXML
+    void shuffleButtonClicked()
+    {
+        if (isShuffleMode)
+        {
+            // SHUFFLE OFF
+            isShuffleMode = false;
+            shuffleDefault();
+        }
+        else
+        {
+            //SHUFFLE ON
+            isShuffleMode = true;
+            currentIndex = shuffleSongs();
+            shuffleHover();
+
         }
     }
+    //get random index for shuffle mod
+    private int shuffleSongs()
+    {
+        Random random = new Random();
+        int randomIndex;
+        return randomIndex = random.nextInt(table.getItems().size());
+    }
+
+
 
 
     public SongController()
@@ -288,16 +336,17 @@ public class SongController
             });
 
             mediaPlayer.play();
+            currentIndex = song.getId()-1;;
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+            System.out.println("Something missing!");
         }
 
 
 
         //SLIDER, DURATION SECTION
-        //setting initial values
+        //setting initial time values
         mediaPlayer.currentTimeProperty().addListener(new ChangeListener<Duration>()
         {
             @Override
