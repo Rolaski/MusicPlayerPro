@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 22 Gru 2023, 19:38
+-- Czas generowania: 26 Gru 2023, 09:20
 -- Wersja serwera: 10.4.21-MariaDB
 -- Wersja PHP: 7.3.30
 
@@ -41,14 +41,18 @@ CREATE TABLE `songs` (
 --
 
 INSERT INTO `songs` (`id`, `track`, `musician`, `length`, `path`, `albumPath`) VALUES
-(1, 'Italodisco', 'The Kolors', '00:03:20', 'Italodisco.mp3', 'Italodisco.mp3'),
-(2, 'Afraid To Fell', 'LF SYSTEM', '00:02:57', '/project/songs/AfraidToFeel.mp3', '/project/albums/AfraidToFell.png'),
-(3, 'Pump It', 'The Black Eyed Peas', '00:02:56', '/project/songs/PumpIt.mp3', '/project/albums/PumpIt.jpg'),
-(4, 'Nicea', 'PRO8L3M', '00:03:38', '/project/songs/Nicea.mp3', '/project/albums/Nicea.jpg'),
-(5, 'Mayday', 'PRO8L3M', '00:03:58', '/project/songs/Mayday.mp3', '/project/albums/Mayday.jpg'),
-(6, 'No More Tears', 'Ozzy Osbourne', '00:05:55', '/project/songs/NoMoreTears.mp3', '/project/albums/NoMoreTears.jpg'),
-(7, 'Workin!', 'MUPP x Sadfriendd', '00:01:32', '/project/songs/Workin.mp3', '/project/albums/Workin.jpg'),
-(8, 'Jeremy Sochan', 'OKI', '00:02:26', '/project/songs/JeremySochan.mp3', '/project/albums/JeremySochan.jpg');
+(1, 'Italodisco', 'The Kolors', '00:03:20', '/com/example/songs/Italodisco.mp3', '/com/example/albums/Italodisco.jpg'),
+(2, 'Afraid To Feel', 'LF SYSTEM', '00:02:57', '/com/example/songs/AfraidToFeel.mp3', '/com/example/albums/AfraidToFeel.png'),
+(3, 'Pump It', 'The Black Eyed Peas', '00:02:56', '/com/example/songs/PumpIt.mp3', '/com/example/albums/PumpIt.jpg'),
+(4, 'Nicea', 'PRO8L3M', '00:03:38', '/com/example/songs/Nicea.mp3', '/com/example/albums/Nicea.jpg'),
+(5, 'Mayday', 'PRO8L3M', '00:03:58', '/com/example/songs/Mayday.mp3', '/com/example/albums/Mayday.jpg'),
+(6, 'No More Tears', 'Ozzy Osbourne', '00:05:55', '/com/example/songs/NoMoreTears.mp3', '/com/example/albums/NoMoreTears.jpg'),
+(7, 'Workin!', 'MUPP x Sadfriendd', '00:01:32', '/com/example/songs/Workin.mp3', '/com/example/albums/Workin.jpg'),
+(8, 'Jeremy Sochan', 'OKI', '00:02:26', '/com/example/songs/JeremySochan.mp3', '/com/example/albums/JeremySochan.jpg'),
+(9, 'Adidas', 'Russian Village Boys & Mr. Polska', '00:02:15', '/com/example/songs/Adidas.mp3', '/com/example/albums/Adidas.jpg'),
+(10, 'Bungee', 'Hotel Maffija', '00:03:18', '/com/example/songs/Bungee.mp3', '/com/example/albums/Bungee.jpg'),
+(11, 'Good will hunting', 'Schafter', '00:03:01', '/com/example/songs/GoodWillHunting.mp3', '/com/example/albums/GoodWillHunting.jpg'),
+(12, 'OUT WEST', 'Travis Scott & JACKBOYS', '00:02:43', '/com/example/songs/OutWest.mp3', '/com/example/albums/OutWest.jpg');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -68,7 +72,7 @@ ALTER TABLE `songs`
 -- AUTO_INCREMENT dla tabeli `songs`
 --
 ALTER TABLE `songs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
