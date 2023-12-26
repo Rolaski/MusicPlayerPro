@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3c0162-5745-4abf-9b5d-9e58916fad66" name="Changes" comment="removing Setters">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/albums/AfraidToFell.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/MusicPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/MusicPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +30,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Rolaski"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rolaski&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="274b106e-883a-4963-b0a1-5c83b1cc6e7d" />
+        <option name="accountId" value="f55acad4-03b4-4569-9950-78eeb774dc28" />
         <option name="url" value="https://github.com/Rolaski/MusicPlayerPro.git" />
       </UrlAndAccount>
     </option>
@@ -51,11 +57,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/jakub/AppData/Local/SceneBuilder/SceneBuilder.exe"
+    "last_opened_file_path": "C:/Users/Admin/IdeaProjects/MusicPlayerPro",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="main" type="Application" factoryName="Application">
+    <configuration name="MusicPlayerPro" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.musicplayerpro.files.Main" />
       <module name="MusicPlayerPro" />
       <method v="2">
