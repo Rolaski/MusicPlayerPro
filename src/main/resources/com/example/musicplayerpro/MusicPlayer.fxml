@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="660.0" prefWidth="815.0" styleClass="color" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayerpro.files.SongController">
+<AnchorPane fx:id="AnchorPane" prefHeight="660.0" prefWidth="815.0" styleClass="color" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayerpro.files.SongController">
     <children>
         <TableView id="table" fx:id="table" layoutX="22.0" prefHeight="524.0" prefWidth="771.0" stylesheets="@styleTable.css">
             <columns>
