@@ -46,14 +46,56 @@
 }
 
 
-/*wywalenie paska przewijania bo jest zbedny*/
+
+/*======SCROLL SECTION======*/
+
+/*removal of the horizontal scroll bar*/
 #table .scroll-bar:horizontal
 {
     -fx-opacity: 0;
     -fx-visibility: hidden;
+    -fx-background-color: transparent;
 }
 
 #table .virtual-flow
 {
     -fx-viewport-position: top;
+    -fx-background-color: transparent;
 }
+
+
+
+#table .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 3;
+    -fx-pref-width: 15;
+}
+
+#table .scroll-bar .increment-button,
+#table .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-visibility: hidden;
+}
+
+/* remove arrows */
+#table .scroll-bar .increment-arrow,
+#table .scroll-bar .decrement-arrow {
+    -fx-visibility: hidden;
+    -fx-background-color: transparent;
+}
+
+#table .scroll-bar .thumb {
+    -fx-background-color: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-background-insets: 0;
+    -fx-padding: 5;
+    -fx-pref-width: 0.2;
+
+}
+/*remove white square, idk why it spawned in application*/
+#table .corner {
+    -fx-background-color: transparent;
+}
+
+
+
+
