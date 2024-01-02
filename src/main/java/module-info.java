@@ -13,4 +13,5 @@ module com.example.musicplayerpro
     opens com.example.musicplayerpro to javafx.fxml;
     opens com.example.musicplayerpro.files to javafx.fxml, org.hibernate.orm.core;
     exports com.example.musicplayerpro.files;
+
 }

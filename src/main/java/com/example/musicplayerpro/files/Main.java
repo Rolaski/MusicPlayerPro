@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.io.InputStream;
 import java.util.Objects;
 
 public class Main extends Application
@@ -18,7 +20,8 @@ public class Main extends Application
         {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/musicplayerpro/MusicPlayer.fxml")));
             primaryStage.setTitle("Music Player PRO");
-            Image Icon = new Image("file:src/main/resources/com/example/images/theme.png");
+            InputStream iconStream = getClass().getResourceAsStream("/com/example/images/theme.png");
+            Image Icon = new Image(iconStream);
             primaryStage.getIcons().add(Icon);
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
