@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3c0162-5745-4abf-9b5d-9e58916fad66" name="Changes" comment="removing Setters">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/Musician.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SceneManager.java" afterDir="false" />
@@ -37,6 +38,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+>>>>>>> 57ebc0c64ffd9c6e74787f82fd81e55210bb9399
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
