@@ -2,6 +2,7 @@ package com.example.musicplayerpro.files;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -19,6 +20,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
+import static com.example.musicplayerpro.files.Main.sceneManager;
+
 public class SongController
 {
 
@@ -29,7 +32,7 @@ public class SongController
     private TableColumn<Song, String> track;
 
     @FXML
-    private TableColumn<Song, String> musician;
+    private TableColumn<Song, Musician> musician;
 
     @FXML
     private TableColumn<Song, String> songLength;
@@ -60,6 +63,8 @@ public class SongController
     private ImageView next;
     @FXML
     private ImageView shuffle;
+    @FXML
+    private ImageView previous;
 
     private boolean isSliderBeingDragged = false;
     private boolean isShuffleMode = false;
@@ -129,6 +134,27 @@ public class SongController
         Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/shuffleHover.png")).toExternalForm());
         shuffle.setImage(hoverImage);
     }
+    @FXML
+    void previousDefault()
+    {
+        Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/previous.png")).toExternalForm());
+        previous.setImage(defaultImage);
+    }
+    @FXML
+    void previousHover()
+    {
+        Image hoverImage = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/previousHover.png")).toExternalForm());
+        previous.setImage(hoverImage);
+    }
+
+    @FXML
+    private void goToLoginPanel(ActionEvent event)
+    {
+        stopSong();
+        sceneManager.switchScene("LoginController");
+    }
+
+
 
 
 
@@ -254,8 +280,7 @@ public class SongController
     //load all songs from database, using entity of course
     private void loadSongs()
     {
-        try (Session session = sessionFactory.openSession())
-        {
+        try (Session session = sessionFactory.openSession()) {
             List<Song> songs = session.createQuery("FROM Song", Song.class).list();
             table.getItems().addAll(songs);
         }
@@ -316,6 +341,7 @@ public class SongController
 
             //IMAGE file opening
             String albumImagePath = String.valueOf(getClass().getResource(song.getAlbumPath()));
+
             if (albumImagePath != null) {
                 Image albumImage = new Image(albumImagePath);
                 albumView.setImage(albumImage);
