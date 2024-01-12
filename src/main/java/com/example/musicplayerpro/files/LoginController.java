@@ -14,11 +14,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.hibernate.cfg.Configuration;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 import javafx.scene.input.KeyCode;
-
-
+import org.mindrot.jbcrypt.BCrypt;
 
 
 public class LoginController
@@ -37,8 +38,8 @@ public class LoginController
     private ImageView loginIcon;
     @FXML
     private ImageView registerIcon;
-    @FXML
-    private ImageView adminIcon;
+
+    public static String userType;
 
 
     @FXML
@@ -65,18 +66,6 @@ public class LoginController
         Image registerHover = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/registerHover.png")).toExternalForm());
         registerIcon.setImage(registerHover);
     }
-    @FXML
-    void adminDefault(MouseEvent event)
-    {
-        Image adminDefault = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/admin.png")).toExternalForm());
-        adminIcon.setImage(adminDefault);
-    }
-    @FXML
-    void adminHover(MouseEvent event)
-    {
-        Image adminHover = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/adminHover.png")).toExternalForm());
-        adminIcon.setImage(adminHover);
-    }
 
     @FXML
     private void registerPanel()
@@ -84,11 +73,6 @@ public class LoginController
         sceneManager.switchScene("RegisterController");
     }
 
-    @FXML
-    private void adminPanel(ActionEvent event)
-    {
-        System.out.println("ADMIN PANEL RIGHT HERE!");
-    }
 
     @FXML
     private void initialize()
@@ -125,34 +109,53 @@ public class LoginController
         String userPassword = password.getText();
 
         SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+        Session session = null;
 
-        try(Session session = sessionFactory.openSession())
+        try
         {
-            String hql = "FROM User u WHERE u.userName = :userName AND u.userPassword = :userPassword";
+            session = sessionFactory.openSession();
+            String hql = "FROM User u WHERE u.userName = :userName";
             Query<User> query = session.createQuery(hql, User.class);
             query.setParameter("userName", userName);
-            query.setParameter("userPassword", userPassword);
 
             List<User> users = query.list();
             if (!users.isEmpty())
             {
-                loginSuccessful(event);
+                for(User user: users)
+                {
+                    if (user.getUserName().equals(userName) && BCrypt.checkpw(userPassword, user.getUserPassword()))
+                    {
+                        userType = String.valueOf(user.getUserType());
+                        loginSuccessful(event);
+                    }
+                    else
+                    {
+                        errorLabel.setText("Incorrect user name or password");
+                    }
+                }
             }
             else
             {
-                errorLabel.setText("Incorrect user name or password");
+                errorLabel.setText("User not found");
             }
         }
         catch (Exception e)
         {
             System.out.println("An error occurred while logging in : " + e.getMessage());
         }
+        finally
+        {
+            if (session != null && session.isOpen())
+            {
+                session.close();
+            }
+        }
     }
 
-    private void loginSuccessful(ActionEvent event)
-    {
+    private void loginSuccessful(ActionEvent event) throws IOException {
         name.setText("");
         password.setText("");
+        sceneManager.loadScene("SongController", "/com/example/musicplayerpro/MusicPlayer.fxml");
         sceneManager.switchScene("SongController");
 
     }
