@@ -6,7 +6,11 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.mindrot.jbcrypt.BCrypt;
 import java.util.Objects;
 
 import static com.example.musicplayerpro.files.Main.sceneManager;
@@ -19,8 +23,7 @@ public class RegisterController {
     private PasswordField password, passwordAgain;
     @FXML
     private CheckBox checkbox;
-    @FXML
-    private RadioButton radioButton1, radioButton2;
+
     @FXML
     private Label errorLabelUser, errorLabelPassword;
     @FXML
@@ -57,10 +60,6 @@ public class RegisterController {
     @FXML
     private void initialize()
     {
-        ToggleGroup radioButtonGroup = new ToggleGroup();
-        radioButton1.setToggleGroup(radioButtonGroup);
-        radioButton2.setToggleGroup(radioButtonGroup);
-
         checkbox.setOnAction(event -> {
             if (checkbox.isSelected()) {
                 passwordAgain.setDisable(true);
@@ -153,7 +152,39 @@ public class RegisterController {
     {
         if(checkUserValidity() && checkPasswordValidity())
         {
-            errorLabelUser.setText("Rejestracja udana!");
+            User user = new User();
+            user.setUserName(name.getText());
+            String hashedPassword = BCrypt.hashpw(password.getText(), BCrypt.gensalt());
+            user.setUserPassword(hashedPassword);
+            user.setUserType(UserType.user);
+
+            SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+            Session session = sessionFactory.openSession();
+            Transaction transaction = session.beginTransaction();
+
+            try {
+                // Zapis nowego użytkownika do bazy danych
+                session.save(user);
+
+                // Zatwierdzenie transakcji
+                transaction.commit();
+
+                // Informacja o udanej rejestracji
+                errorLabelUser.setText("Rejestracja udana!");
+            } catch (Exception e) {
+                // Obsługa błędu, np. wypisanie na konsoli
+                e.printStackTrace();
+
+                // Wycofanie transakcji w przypadku błędu
+                transaction.rollback();
+
+                // Informacja o błędzie rejestracji
+                errorLabelUser.setText("Błąd podczas rejestracji");
+            } finally {
+                // Zamknięcie sesji
+                session.close();
+            }
+
         }
     }
 
