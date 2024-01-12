@@ -1,35 +1,30 @@
 package com.example.musicplayerpro.files;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
+import java.io.IOException;
 import java.io.InputStream;
-import java.util.Objects;
 
 public class Main extends Application
 {
+    public static SceneManager sceneManager;
 
     @Override
-    public void start(Stage primaryStage) throws Exception
-    {
-        try
-        {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/musicplayerpro/MusicPlayer.fxml")));
-            primaryStage.setTitle("Music Player PRO");
-            InputStream iconStream = getClass().getResourceAsStream("/com/example/images/theme.png");
-            Image Icon = new Image(iconStream);
-            primaryStage.getIcons().add(Icon);
-            primaryStage.setScene(new Scene(root));
-            primaryStage.show();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
+    public void start(Stage primaryStage) throws IOException {
+        sceneManager = SceneManager.getInstance(primaryStage);
+        sceneManager.loadScene("LoginController", "/com/example/musicplayerpro/LoginPanel.fxml");
+        sceneManager.loadScene("SongController", "/com/example/musicplayerpro/MusicPlayer.fxml");
+        sceneManager.loadScene("RegisterController", "/com/example/musicplayerpro/RegisterPanel.fxml");
+
+
+        sceneManager.switchScene("LoginController");
+        InputStream iconStream = getClass().getResourceAsStream("/com/example/images/theme.png");
+        Image icon = new Image(iconStream);
+        primaryStage.getIcons().add(icon);
+        primaryStage.setTitle("MusicPlayerPro");
+        primaryStage.setResizable(true);
+        primaryStage.show();
     }
 
     public static void main(String[] args)
