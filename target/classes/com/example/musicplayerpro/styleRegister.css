@@ -1,0 +1,80 @@
+.color
+{
+    -fx-background-image: url("../images/background.jpg");
+}
+
+#title
+{
+   -fx-background-color: transparent;
+   -fx-font-size: 35;
+   -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER;
+
+}
+
+#registerTitle
+{
+    -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+}
+
+#userTitle, #passwordTitle
+{
+    -fx-text-fill: #282828;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+#userTextArea, #passwordArea
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #282828;
+    -fx-font-size: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-opacity: 1.0;
+}
+
+
+#showPasswordCheckBox
+{
+    -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+}
+#showPasswordCheckBox .box
+{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 5;
+}
+#showPasswordCheckBox:selected
+{
+    -fx-text-fill: #282828;
+    -fx-font-weight: bold;
+}
+
+#radioButton1, #radioButton2
+{
+     -fx-text-fill: #282828;
+}
+
+#errorLabelUser, #errorLabelPassword
+{
+    -fx-text-fill: black;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+.button
+{
+    -fx-background-color: transparent;
+}
+
+
+

@@ -1,0 +1,73 @@
+.color
+{
+    -fx-background-image: url("../images/background.jpg");
+}
+
+#titleLabel
+{
+   -fx-background-color: transparent;
+   -fx-font-size: 35;
+   -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER;
+
+}
+
+#loginLabel
+{
+    -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+}
+
+#userLabel, #passwordLabel
+{
+    -fx-text-fill: #282828;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+#userTextArea, #passwordArea
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #282828;
+    -fx-font-size: 15;
+    -fx-border-color: black;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-opacity: 1.0;
+}
+
+
+
+#errorLabel
+{
+    -fx-text-fill: black;
+    -fx-font-size: 25;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+#showPasswordCheckBox
+{
+    -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+}
+#showPasswordCheckBox .box
+{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 5;
+}
+#showPasswordCheckBox:selected
+{
+    -fx-text-fill: #282828;
+    -fx-font-weight: bold;
+}
+
+.button
+{
+    -fx-background-color: transparent;
+}
