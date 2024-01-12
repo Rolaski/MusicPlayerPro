@@ -19,11 +19,13 @@
 }
 
 
-#playButton, #pauseButton, #resetButton, #nextButton, #shuffleButton
+#playButton, #pauseButton, #resetButton, #nextButton, #shuffleButton, #previousButton
 {
     -fx-background-color: transparent;
     -fx-border-width: 0;
 }
+
+
 
 
 .trackView
