@@ -14,7 +14,6 @@ public class Main extends Application
     public void start(Stage primaryStage) throws IOException {
         sceneManager = SceneManager.getInstance(primaryStage);
         sceneManager.loadScene("LoginController", "/com/example/musicplayerpro/LoginPanel.fxml");
-        sceneManager.loadScene("SongController", "/com/example/musicplayerpro/MusicPlayer.fxml");
         sceneManager.loadScene("RegisterController", "/com/example/musicplayerpro/RegisterPanel.fxml");
 
 
