@@ -10,37 +10,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3c0162-5745-4abf-9b5d-9e58916fad66" name="Changes" comment="removing Setters">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/Musician.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SceneManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/UserType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/RegisterPanel.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleLogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleRegister.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/MusicPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/MusicPlayer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/RegisterPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/RegisterPanel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/LoginPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/LoginPanel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/MusicPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/MusicPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/Song.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/RegisterPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/RegisterPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/RegisterController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
->>>>>>> 57ebc0c64ffd9c6e74787f82fd81e55210bb9399
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +40,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
+    <option name="RECENT_TEMPLATES" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +74,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/IdeaProjects/MusicPlayerPro/out/artifacts/MusicPlayerPro_jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.345977&quot;
   }
