@@ -65,6 +65,8 @@ public class SongController
     private ImageView shuffle;
     @FXML
     private ImageView previous;
+    @FXML
+    private ImageView adminIcon;
 
     private boolean isSliderBeingDragged = false;
     private boolean isShuffleMode = false;
@@ -154,6 +156,19 @@ public class SongController
         sceneManager.switchScene("LoginController");
     }
 
+    @FXML
+    void adminDefault(MouseEvent event)
+    {
+        Image adminDefault = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/admin.png")).toExternalForm());
+        adminIcon.setImage(adminDefault);
+    }
+    @FXML
+    void adminHover(MouseEvent event)
+    {
+        Image adminHover = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/adminHover.png")).toExternalForm());
+        adminIcon.setImage(adminHover);
+    }
+
 
 
 
@@ -236,7 +251,11 @@ public class SongController
         return randomIndex = random.nextInt(table.getItems().size());
     }
 
-
+    @FXML
+    private void adminPanel(ActionEvent event)
+    {
+        System.out.println("ADMIN PANEL RIGHT HERE!");
+    }
 
 
     public SongController()
@@ -244,9 +263,30 @@ public class SongController
         sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 
+    //method for
+    private void checkUserType()
+    {
+
+        if (LoginController.userType.equals("admin"))
+        {
+            System.out.println("ADMIN");
+            adminIcon.setVisible(true);
+            adminIcon.setDisable(false);
+        }
+        else
+        {
+            //userType is user
+            adminIcon.setVisible(false);
+            adminIcon.setDisable(true);
+        }
+    }
+
     @FXML
     private void initialize()
     {
+        System.out.println("USER TYPE: "+LoginController.userType);
+        checkUserType();
+
         track.setCellValueFactory(new PropertyValueFactory<>("track"));
         musician.setCellValueFactory(new PropertyValueFactory<>("musician"));
         songLength.setCellValueFactory(new PropertyValueFactory<>("songLength"));
