@@ -13,5 +13,7 @@
         <property name="hibernate.hbm2ddl.auto">validate</property>
 
         <mapping class="com.example.musicplayerpro.files.Song"/>
+        <mapping class="com.example.musicplayerpro.files.Musician"/>
+        <mapping class="com.example.musicplayerpro.files.User"/>
     </session-factory>
 </hibernate-configuration>
