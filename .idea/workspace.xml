@@ -10,20 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08d37717-13a0-41f2-bb65-8cd625c49e41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MusicPlayerPro_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/AdminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/AdminPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleAdmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleAdmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/AdminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/AdminPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/styleTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/styleTable.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
