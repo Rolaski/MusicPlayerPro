@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="647.0" prefWidth="717.0" styleClass="color" stylesheets="@styleAdmin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayerpro.files.AdminController">
+    <children>
+        <TableView fx:id="tableView" layoutX="29.0" layoutY="29.0" prefHeight="300.0" prefWidth="659.0">
+            <columns>
+                <TableColumn fx:id="columnID" prefWidth="85.0" resizable="false" text="ID" />
+                <TableColumn fx:id="columnName" prefWidth="350.0" resizable="false" text="User Name" />
+                <TableColumn fx:id="columnUserType" maxWidth="1.7976931348623157E308" prefWidth="223.0" resizable="false" text="User Type" />
+            </columns>
+        </TableView>
+      <Label fx:id="labelUpdate" layoutX="38.0" layoutY="420.0" prefHeight="36.0" prefWidth="302.0" text="UPDATE USER DETAILS:" />
+      <TextField fx:id="updateId" layoutX="38.0" layoutY="461.0" prefHeight="41.0" prefWidth="112.0" promptText="ID" />
+        <TextField fx:id="updateName" layoutX="164.0" layoutY="461.0" prefHeight="41.0" prefWidth="166.0" promptText="Name" />
+        <ChoiceBox fx:id="choiceBox" layoutX="348.0" layoutY="461.0" prefHeight="41.0" prefWidth="112.0" />
+      <Label fx:id="labelDelete" layoutX="38.0" layoutY="524.0" prefHeight="36.0" prefWidth="302.0" text="DELETE SELCTED USER" />
+      <TextField fx:id="deleteId" layoutX="38.0" layoutY="557.0" prefHeight="41.0" prefWidth="112.0" promptText="ID" />
+      <TextField fx:id="deleteName" layoutX="164.0" layoutY="557.0" prefHeight="41.0" prefWidth="166.0" promptText="Name" />
+      <Button fx:id="previousButton" layoutX="8.0" layoutY="7.0" mnemonicParsing="false" onAction="#goToLoginPanel" onMouseEntered="#previousHover" onMouseExited="#previousDefault" prefHeight="32.0" prefWidth="38.0">
+         <graphic>
+            <ImageView fx:id="previous" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/previous.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="updateButton" layoutX="490.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleUpdateButton" onMouseEntered="#updateHover" onMouseExited="#updateDefault" prefHeight="67.0" prefWidth="73.0">
+         <graphic>
+            <ImageView fx:id="updateIcon" fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="359.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleDeleteButton" onMouseEntered="#deleteHover" onMouseExited="#deleteDefault" prefHeight="67.0" prefWidth="73.0">
+         <graphic>
+            <ImageView fx:id="deleteIcon" fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>
