@@ -15,9 +15,9 @@ public class Main extends Application
         sceneManager = SceneManager.getInstance(primaryStage);
         sceneManager.loadScene("LoginController", "/com/example/musicplayerpro/LoginPanel.fxml");
         sceneManager.loadScene("RegisterController", "/com/example/musicplayerpro/RegisterPanel.fxml");
-
-
+        sceneManager.loadScene("AdminController", "/com/example/musicplayerpro/AdminPanel.fxml");
         sceneManager.switchScene("LoginController");
+
         InputStream iconStream = getClass().getResourceAsStream("/com/example/images/theme.png");
         Image icon = new Image(iconStream);
         primaryStage.getIcons().add(icon);
