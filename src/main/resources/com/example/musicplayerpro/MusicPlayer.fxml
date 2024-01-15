@@ -16,7 +16,7 @@
             <columns>
                 <TableColumn id="track" fx:id="track" prefWidth="232.0" text="TRACK" />
                 <TableColumn fx:id="musician" prefWidth="326.0" text="MUSICIAN" />
-                <TableColumn fx:id="songLength" prefWidth="212.0" text="LENGTH" />
+                <TableColumn fx:id="songLength" maxWidth="1.7976931348623157E308" prefWidth="212.0" text="LENGTH" />
             </columns>
          <cursor>
             <Cursor fx:constant="DEFAULT" />
