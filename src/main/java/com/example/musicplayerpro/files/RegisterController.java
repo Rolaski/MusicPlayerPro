@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import org.mindrot.jbcrypt.BCrypt;
 import java.util.Objects;
@@ -56,7 +57,8 @@ public class RegisterController {
     @FXML
     private void initialize()
     {
-        checkbox.setOnAction(event -> {
+        checkbox.setOnAction(event ->
+        {
             if (checkbox.isSelected()) {
                 passwordAgain.setDisable(true);
                 passwordAgain.setPromptText(passwordAgain.getText());
@@ -67,6 +69,26 @@ public class RegisterController {
                 passwordAgain.setPromptText("Password");
             }
         });
+
+        name.setOnKeyPressed(event ->
+        {
+            if(event.getCode().equals(KeyCode.ENTER)) {
+                registerSuccessful(new ActionEvent());
+            }
+        });
+
+        password.setOnKeyPressed(event -> {
+            if(event.getCode().equals(KeyCode.ENTER)) {
+                registerSuccessful(new ActionEvent());
+            }
+        });
+
+        passwordAgain.setOnKeyPressed(event -> {
+            if(event.getCode().equals(KeyCode.ENTER)) {
+                registerSuccessful(new ActionEvent());
+            }
+        });
+
     }
     //method for passwords validation
     private boolean checkUserValidity()
@@ -154,14 +176,22 @@ public class RegisterController {
             user.setUserPassword(hashedPassword);
             user.setUserType(UserType.user);
 
-            try {
+            try
+            {
                 DatabaseManager.saveUser(user);
                 errorLabelUser.setText("Registration successful!");
-            } catch (Exception e) {
+            } catch (Exception e)
+            {
                 e.printStackTrace();
                 errorLabelUser.setText("Error while try to register account");
             }
+            name.setText("");
+            password.setText("");
+            passwordAgain.setText("");
+            errorLabelPassword.setText("");
         }
+
+
     }
 
 
