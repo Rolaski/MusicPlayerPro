@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MusicPlayerPro:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08d37717-13a0-41f2-bb65-8cd625c49e41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MusicPlayerPro_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MusicPlayerPro_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/musicplayerpro/files/SongController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/MusicPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/MusicPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/RegisterPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/RegisterPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/MusicPlayer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/MusicPlayer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/RegisterPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/RegisterPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SceneManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SceneManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/AdminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/AdminPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/LoginPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleAdmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleAdmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/musicplayerpro/styleLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/AdminPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/AdminPanel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/files/SongController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/musicplayerpro/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,11 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.345977&quot;
   }
 }</component>
   <component name="RunManager">
