@@ -3,5 +3,6 @@ package com.example.musicplayerpro.files;
 public enum UserType
 {
     admin,
-    user
+    user,
+    premium
 }
