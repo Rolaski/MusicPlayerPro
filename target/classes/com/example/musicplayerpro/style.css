@@ -1,8 +1,7 @@
-.root {
+.root
+{
     -fx-font-family: "Comic Sans MS";
 }
-
-
 .color
 {
     -fx-background-image: url("../images/background.jpg");
