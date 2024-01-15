@@ -19,7 +19,7 @@
                 <TableColumn fx:id="columnUserType" maxWidth="1.7976931348623157E308" prefWidth="223.0" resizable="false" text="User Type" />
             </columns>
         </TableView>
-      <Label fx:id="labelUpdate" layoutX="38.0" layoutY="420.0" prefHeight="36.0" prefWidth="302.0" text="UPDATE USER DETAILS:" />
+      <Label fx:id="labelUpdate" layoutX="38.0" layoutY="420.0" prefHeight="36.0" prefWidth="294.0" text="UPDATE USER DETAILS:" />
       <TextField fx:id="updateId" layoutX="38.0" layoutY="461.0" prefHeight="41.0" prefWidth="112.0" promptText="ID" />
         <TextField fx:id="updateName" layoutX="164.0" layoutY="461.0" prefHeight="41.0" prefWidth="166.0" promptText="Name" />
         <ChoiceBox fx:id="choiceBox" layoutX="348.0" layoutY="461.0" prefHeight="41.0" prefWidth="112.0" />

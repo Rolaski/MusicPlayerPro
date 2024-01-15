@@ -11,8 +11,8 @@
 
 <AnchorPane prefHeight="647.0" prefWidth="717.0" styleClass="color" stylesheets="@styleLogin.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicplayerpro.files.LoginController">
    <children>
-      <Label id="titleLabel" layoutX="154.0" layoutY="53.0" prefHeight="39.0" prefWidth="334.0" text="MUSIC PLAYER PRO" />
-      <ImageView fitHeight="51.0" fitWidth="59.0" layoutX="512.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <Label id="titleLabel" layoutX="154.0" layoutY="53.0" prefHeight="50.0" prefWidth="355.0" text="MUSIC PLAYER PRO" />
+      <ImageView fitHeight="51.0" fitWidth="59.0" layoutX="517.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/theme.png" />
          </image>
