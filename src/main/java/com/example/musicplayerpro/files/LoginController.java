@@ -10,13 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Objects;
 import javafx.scene.input.KeyCode;
 import org.mindrot.jbcrypt.BCrypt;
@@ -40,6 +35,7 @@ public class LoginController
     private ImageView registerIcon;
 
     public static String userType;
+    public static boolean isPremium;
 
 
     @FXML
@@ -108,53 +104,33 @@ public class LoginController
         String userName = name.getText();
         String userPassword = password.getText();
 
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-        Session session = null;
+        try {
+            User user = DatabaseManager.getUserByUserName(userName);
 
-        try
-        {
-            session = sessionFactory.openSession();
-            String hql = "FROM User u WHERE u.userName = :userName";
-            Query<User> query = session.createQuery(hql, User.class);
-            query.setParameter("userName", userName);
-
-            List<User> users = query.list();
-            if (!users.isEmpty())
-            {
-                for(User user: users)
+            if (user != null && BCrypt.checkpw(userPassword, user.getUserPassword())) {
+                userType = String.valueOf(user.getUserType());
+                if(userType.equals("premium") || userType.equals("admin"))
                 {
-                    if (user.getUserName().equals(userName) && BCrypt.checkpw(userPassword, user.getUserPassword()))
-                    {
-                        userType = String.valueOf(user.getUserType());
-                        loginSuccessful(event);
-                    }
-                    else
-                    {
-                        errorLabel.setText("Incorrect user name or password");
-                    }
+                    isPremium = true;
                 }
+                else
+                {
+                    isPremium = false;
+                }
+                loginSuccessful(event);
+            } else {
+                errorLabel.setText("Incorrect user name or password");
             }
-            else
-            {
-                errorLabel.setText("User not found");
-            }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("An error occurred while logging in : " + e.getMessage());
-        }
-        finally
-        {
-            if (session != null && session.isOpen())
-            {
-                session.close();
-            }
         }
     }
 
-    private void loginSuccessful(ActionEvent event) throws IOException {
+    private void loginSuccessful(ActionEvent event) throws IOException
+    {
         name.setText("");
         password.setText("");
+        errorLabel.setText("");
         sceneManager.loadScene("SongController", "/com/example/musicplayerpro/MusicPlayer.fxml");
         sceneManager.switchScene("SongController");
 
