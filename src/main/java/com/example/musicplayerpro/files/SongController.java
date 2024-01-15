@@ -66,6 +66,8 @@ public class SongController
     @FXML
     private ImageView shuffle;
     @FXML
+    private Button shuffleButton;
+    @FXML
     private ImageView previous;
     @FXML
     private ImageView adminIcon;
@@ -172,10 +174,6 @@ public class SongController
         Image adminHover = new Image(Objects.requireNonNull(getClass().getResource("/com/example/images/adminHover.png")).toExternalForm());
         adminIcon.setImage(adminHover);
     }
-
-
-
-
 
     //song resume
     @FXML
@@ -318,7 +316,8 @@ public class SongController
         //Access to listening to the selected song by the admin or user premium
         if(!LoginController.isPremium)
         {
-            shuffle.setDisable(true);
+            shuffleButton.setDisable(true);
+            shuffle.setVisible(true);
             shuffleHover();
             isShuffleMode = true;
         }
