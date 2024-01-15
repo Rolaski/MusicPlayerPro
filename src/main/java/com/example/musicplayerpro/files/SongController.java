@@ -16,6 +16,8 @@ import javafx.util.Duration;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
@@ -67,6 +69,8 @@ public class SongController
     private ImageView previous;
     @FXML
     private ImageView adminIcon;
+    @FXML
+    private Button adminButton;
 
     private boolean isSliderBeingDragged = false;
     private boolean isShuffleMode = false;
@@ -252,9 +256,11 @@ public class SongController
     }
 
     @FXML
-    private void adminPanel(ActionEvent event)
+    private void adminPanel(ActionEvent event) throws IOException
     {
-        System.out.println("ADMIN PANEL RIGHT HERE!");
+        stopSong();
+        sceneManager.loadScene("AdminController", "/com/example/musicplayerpro/AdminPanel.fxml");
+        sceneManager.switchScene("AdminController");
     }
 
 
@@ -263,7 +269,7 @@ public class SongController
         sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 
-    //method for
+    //method for checking if we have an admin account
     private void checkUserType()
     {
 
@@ -272,19 +278,20 @@ public class SongController
             System.out.println("ADMIN");
             adminIcon.setVisible(true);
             adminIcon.setDisable(false);
+            adminButton.setDisable(false);
         }
         else
         {
-            //userType is user
+            //userType is user or premium
             adminIcon.setVisible(false);
             adminIcon.setDisable(true);
+            adminButton.setDisable(true);
         }
     }
 
     @FXML
     private void initialize()
     {
-        System.out.println("USER TYPE: "+LoginController.userType);
         checkUserType();
 
         track.setCellValueFactory(new PropertyValueFactory<>("track"));
@@ -294,6 +301,8 @@ public class SongController
         track.setSortable(false);
         musician.setSortable(false);
         songLength.setSortable(false);
+
+        //load all songs to tableview
         loadSongs();
 
         volumeBar.setValue(lastVolumeValue);
@@ -306,21 +315,33 @@ public class SongController
             }
         });
 
-        //Play song which you clicked
-        table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
+        //Access to listening to the selected song by the admin or user premium
+        if(!LoginController.isPremium)
         {
-            stopSong();
-            if (newValue != null)
+            shuffle.setDisable(true);
+            shuffleHover();
+            isShuffleMode = true;
+        }
+        else
+        {
+            //Play song which you clicked
+            table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
             {
-                playSong(newValue);
-            }
-        });
+                stopSong();
+                if (newValue != null)
+                {
+                    playSong(newValue);
+                }
+            });
+            isShuffleMode = false;
+        }
     }
 
     //load all songs from database, using entity of course
     private void loadSongs()
     {
-        try (Session session = sessionFactory.openSession()) {
+        try (Session session = sessionFactory.openSession())
+        {
             List<Song> songs = session.createQuery("FROM Song", Song.class).list();
             table.getItems().addAll(songs);
         }
@@ -374,15 +395,16 @@ public class SongController
                 Media media = new Media(trackPath);
                 mediaPlayer = new MediaPlayer(media);
                 mediaPlayer.setVolume(lastVolumeValue / 100);
-            } else
+            }
+            else
             {
-                System.out.println("I CANNOT FIND IMAGE FOR: " + song.getTrack());
+                System.out.println("I CANNOT FIND MP3 FOR: " + song.getTrack());
             }
 
             //IMAGE file opening
             String albumImagePath = String.valueOf(getClass().getResource(song.getAlbumPath()));
-
-            if (albumImagePath != null) {
+            if (albumImagePath != null)
+            {
                 Image albumImage = new Image(albumImagePath);
                 albumView.setImage(albumImage);
                 trackView.setText(song.getTrack());
@@ -392,6 +414,7 @@ public class SongController
             {
                 System.out.println("I CANNOT FIND IMAGE FOR: " + song.getTrack());
             }
+
             //next song after current song end
             mediaPlayer.setOnEndOfMedia(() ->
             {
