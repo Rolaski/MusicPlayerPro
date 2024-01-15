@@ -47,7 +47,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label fx:id="errorLabelUser" layoutX="149.0" layoutY="514.0" prefHeight="51.0" prefWidth="419.0" />
-      <Label fx:id="errorLabelPassword" layoutX="149.0" layoutY="553.0" prefHeight="51.0" prefWidth="419.0" />
+      <Label fx:id="errorLabelUser" layoutX="124.0" layoutY="514.0" prefHeight="51.0" prefWidth="488.0" />
+      <Label fx:id="errorLabelPassword" layoutX="65.0" layoutY="554.0" prefHeight="51.0" prefWidth="579.0" />
    </children>
 </AnchorPane>
