@@ -1,0 +1,96 @@
+.color
+{
+    -fx-background-image: url("../images/background.jpg");
+}
+
+#tableView .column-header
+{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#tableView
+{
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-font-size: 35;
+}
+#tableView .column-header-background
+{
+    -fx-background-color: transparent;
+}
+#tableView .table-row-cell
+{
+    -fx-background-color: transparent;
+}
+#tableView .table-row-cell .table-cell
+{
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+#tableView .column-header-background .label
+{
+   -fx-background-color: transparent;
+   -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+
+}
+#tableView .table-row-cell:hover .table-cell
+{
+    -fx-text-fill: white;
+    -fx-fill-height: true;
+}
+#tableView .table-row-cell .table-cell
+{
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+/*removal of the horizontal scroll bar*/
+#tableView .scroll-bar:horizontal
+{
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+    -fx-background-color: transparent;
+}
+
+
+
+
+#labelUpdate, #labelDelete
+{
+    -fx-text-fill: linear-gradient(to bottom, #0d1b4c, #1a3a99);
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+#updateId, #updateName, #deleteId, #deleteName
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #282828;
+    -fx-font-size: 15;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-opacity: 1.0;
+}
+
+#choiceBox
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #282828;
+    -fx-font-size: 15;
+    -fx-border-color: black;
+    -fx-font-weight: bold;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-opacity: 1.0;
+}
+
+.button
+{
+    -fx-background-color: transparent;
+}
