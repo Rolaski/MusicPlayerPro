@@ -6,10 +6,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.mindrot.jbcrypt.BCrypt;
 import java.util.Objects;
 
@@ -79,12 +75,12 @@ public class RegisterController {
 
         if (nameText.isEmpty())
         {
-            errorLabelUser.setText("Pole 'Name' nie może być puste");
+            errorLabelUser.setText("Name cannot be empty!");
             return false;
         }
         else if (!isValidUserName(nameText))
         {
-            errorLabelUser.setText("Nieprawidłowe znaki w polu 'Name'");
+            errorLabelUser.setText("Invalid characters in the name field");
             return false;
         }
         else
@@ -108,22 +104,22 @@ public class RegisterController {
 
         if (passwordText.isEmpty() || passwordAgainText.isEmpty())
         {
-            errorLabelPassword.setText("Pole nie może być puste");
+            errorLabelPassword.setText("Fields cannot be empty");
             return false;
         }
         else if (!passwordText.equals(passwordAgainText))
         {
-            errorLabelPassword.setText("Hasła są różne");
+            errorLabelPassword.setText("Passwords are different");
             return false;
         }
         else if (passwordText.length() < 6)
         {
-            errorLabelPassword.setText("Hasło musi mieć co najmniej 5 znaków");
+            errorLabelPassword.setText("The password must be at least 5 characters long");
             return false;
         }
         else if (!containsSpecialCharacter(passwordText))
         {
-            errorLabelPassword.setText("Hasło musi zawierać co najmniej 1 znak specjalny");
+            errorLabelPassword.setText("The password must contain at least 1 special character");
             return false;
         }
         else
@@ -158,40 +154,26 @@ public class RegisterController {
             user.setUserPassword(hashedPassword);
             user.setUserType(UserType.user);
 
-            SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-            Session session = sessionFactory.openSession();
-            Transaction transaction = session.beginTransaction();
-
             try {
-                // Zapis nowego użytkownika do bazy danych
-                session.save(user);
-
-                // Zatwierdzenie transakcji
-                transaction.commit();
-
-                // Informacja o udanej rejestracji
-                errorLabelUser.setText("Rejestracja udana!");
+                DatabaseManager.saveUser(user);
+                errorLabelUser.setText("Registration successful!");
             } catch (Exception e) {
-                // Obsługa błędu, np. wypisanie na konsoli
                 e.printStackTrace();
-
-                // Wycofanie transakcji w przypadku błędu
-                transaction.rollback();
-
-                // Informacja o błędzie rejestracji
-                errorLabelUser.setText("Błąd podczas rejestracji");
-            } finally {
-                // Zamknięcie sesji
-                session.close();
+                errorLabelUser.setText("Error while try to register account");
             }
-
         }
     }
+
 
     //method to return to the previous page
     @FXML
     private void goToLoginPanel(ActionEvent event)
     {
+        name.setText("");
+        password.setText("");
+        passwordAgain.setText("");
+        errorLabelUser.setText("");
+        errorLabelPassword.setText("");
         sceneManager.switchScene("LoginController");
     }
 }
