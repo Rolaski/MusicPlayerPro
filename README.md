@@ -30,7 +30,7 @@ I gained practical experience in database management, user authentication, and b
 <hr>
 
 ## Presentation
-Check out the project in action on [YouTube](#) (insert the link to your YouTube video showcasing the project).
+Check out the project in action on [YouTube](https://youtu.be/skL0QiSQOU4).
 
 <hr>
 
