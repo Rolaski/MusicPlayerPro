@@ -6,6 +6,11 @@ It encompasses all essential features of a music player, such as playing selecte
 
 <hr>
 
+## Presentation
+Check out the project in action on [YouTube](https://youtu.be/skL0QiSQOU4).
+
+<hr>
+
 ## Features
 - **Playback Control:** Listen to selected songs, shuffle mode, play the next track, and seek to any second of the song.
 - **User Authentication:** Users need to log in, and there are three user types: regular user, premium user, and admin.
@@ -29,8 +34,14 @@ I gained practical experience in database management, user authentication, and b
 
 <hr>
 
-## Presentation
-Check out the project in action on [YouTube](https://youtu.be/skL0QiSQOU4).
+## Catalog structure
+-> src - source folder for this project.  
+    -> java - contains module info and all clasess used in this program.  
+    -> resources - hibernate config (include all entities class).
+        -> musicplayerpro - fxml views (scene builder), CSS files for xml views .
+        -> images - images and icons used in project.
+        -> albums - albums images used in project.
+        -> songs - songs .mp3 file used in project.
 
 <hr>
 
