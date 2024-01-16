@@ -35,14 +35,17 @@ I gained practical experience in database management, user authentication, and b
 <hr>
 
 ## Catalog structure
--> src - source folder for this project.  
-    -> java - contains module info and all clasess used in this program.  
-    -> resources - hibernate config (include all entities class).
-        -> musicplayerpro - fxml views (scene builder), CSS files for xml views .
-        -> images - images and icons used in project.
-        -> albums - albums images used in project.
-        -> songs - songs .mp3 file used in project.
+- src
+  - java
+    - contains module info and all classes used in this program
+  - resources
+    - hibernate config (include all entities class)
+    - musicplayerpro: FXML views from Scene Builder, CSS files for XML views
+    - images: images and icons used in the project
+    - albums: album images used in the project
+    - songs: .mp3 files used in the project
 
+              
 <hr>
 
 ## Dependencies
