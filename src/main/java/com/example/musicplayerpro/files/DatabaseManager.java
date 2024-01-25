@@ -14,8 +14,18 @@ public class DatabaseManager {
 
     static
     {
-        Configuration configuration = new Configuration().configure();
-        sessionFactory = configuration.buildSessionFactory();
+        try
+        {
+            Configuration configuration = new Configuration().configure();
+            sessionFactory = configuration.buildSessionFactory();
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error connecting to the database. Exiting program.");
+            System.exit(404);
+            throw new RuntimeException("Unable to initialize DatabaseManager", e);
+        }
+
     }
 
     public static List<User> getAllUsers()
